@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:42:20 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:05:42 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:08:47 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ void    easyfind( T x, int nb ) {
 
 // template<typename T, class C>
 // void    easyfind( T const & t, C&& nb ) {
+    
 //     int last = sizeof(t) / sizeof(*t);
-//     std::cout << CYAN "t + last = " << *(t + last) << END << std::endl;
 
 //     bool exist = std::find(std::begin(nb), std::end(nb), t);
-//     std::cout << CYAN "Nb found? " << *std::find(t, t + last, nb) << END << std::endl;
 //     if (exist) {
-//         std::cout << "Element found\n";
+//         std::cout << GREEN "Success : Element found inside array." END << std::endl;
 //     } else {
 //         throw NotFoundException();
 //     }
