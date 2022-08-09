@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:26:17 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:31:07 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,20 @@ Span::~Span( void ) {
     return ;
 }
 
+void    Span::addNumber( int nb ) {
+
+    if (this->_vec.size() < this->_N)
+        this->_vec.push_back(nb);
+    else
+        throw Span::ReachedMaxNumberException();
+
+    return ;
+}
+
+
 const char    *Span::ReachedMaxNumberException::what()const throw() {
     
-    return (RED "Error: reached max number." END);
+    return (RED "Error: reached max number element." END);
 }
 
 Span   &Span::operator=( Span const &src ) {
