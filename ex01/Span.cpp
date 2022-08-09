@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:22:07 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:26:17 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ Span::~Span( void ) {
     return ;
 }
 
-// const char    *Span::GradeTooLowException::what()const throw() {
+const char    *Span::ReachedMaxNumberException::what()const throw() {
     
-//     return (RED "Error: grade too low." END);
-// }
+    return (RED "Error: reached max number." END);
+}
 
 Span   &Span::operator=( Span const &src ) {
 
