@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 01:15:10 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 01:27:44 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,41 @@ void    Span::addNumber( int nb ) {
     else
         throw Span::ReachedMaxNumberException();
 
+    return ;
+}
+
+void    Span::autoAddNumber( int nb ) {
+    
+    srand(time(NULL));
+
+    for (int i = 0; i < nb; i++)
+    {
+        addNumber(rand() % INT_MAX);
+    }
+    
+    return ;
+}
+
+void    Span::autoAddNumber( int nb, int max_val ) {
+    
+    srand(time(NULL));
+
+    for (int i = 0; i < nb; i++)
+    {
+        addNumber(rand() % max_val);
+    }
+    
+    return ;
+}
+
+void    Span::printVectorArray( void ) {
+
+    std::vector<int>::iterator itr;
+
+    for (itr = this->_vec.begin(); itr != this->_vec.end(); itr++)
+        std::cout << *itr << " ";
+    std::cout << std::endl;
+    
     return ;
 }
 

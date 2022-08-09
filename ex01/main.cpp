@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:41:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 01:15:33 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 01:29:00 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@
 int main()
 {
     Span sp = Span(5);
-    sp.addNumber(6);
-    sp.addNumber(3);
-    sp.addNumber(17);
-    sp.addNumber(9);
-    sp.addNumber(11);
-    std::cout << sp.shortestSpan() << std::endl;
-    std::cout << sp.longestSpan() << std::endl;
+    // sp.addNumber(6);
+    // sp.addNumber(3);
+    // sp.addNumber(17);
+    // sp.addNumber(9);
+    // sp.addNumber(11);
+    // std::cout << sp.shortestSpan() << std::endl;
+    // std::cout << sp.longestSpan() << std::endl;
+
+    sp.autoAddNumber(5, 20);
+    sp.printVectorArray();
 
     // try
     // {

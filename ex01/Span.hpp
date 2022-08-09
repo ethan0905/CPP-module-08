@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:17:04 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 00:11:33 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 01:28:17 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,13 @@ class   Span {
         ~Span( void );
 
         void    addNumber( int nb );
+        void    autoAddNumber( int nb );
+        void    autoAddNumber( int nb, int max_val );
 
         unsigned int    shortestSpan( void );
         unsigned int    longestSpan( void );
+
+        void    printVectorArray( void );
 
         Span  &operator=( Span const &src );
 
