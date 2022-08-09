@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 00:24:56 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 00:30:34 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,14 @@ unsigned int    Span::shortestSpan( void ) {
     // }
 
     std::vector<int>::iterator itr;
-    
+    std::vector<int>::iterator jtr;
+
     for (itr = this->_vec.begin(); itr != this->_vec.end(); itr++)
     {
-        std::cout << "itr: " << *itr << std::endl;
+        for (jtr = (itr + 1); jtr != this->_vec.end(); jtr++) {
+            
+            std::cout << "itr: " << *itr << " | jtr: " << *jtr << std::endl;
+        }
     }
 
     return (shortestSpan);
