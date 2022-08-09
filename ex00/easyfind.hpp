@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:42:20 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 19:56:22 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 20:09:38 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,19 @@ class NotFoundException : public std::exception {
         }
 };
 
+
+
 template<typename T>
 void    easyfind( T const & x, int nb ) {
-    int last = sizeof(x) / sizeof(*x);
-    std::cout << CYAN "x + last = " << *(x + last) << END << std::endl;
 
-    int exist = std::find(x, x + last, nb);
-    std::cout << CYAN "Nb found? " << *std::find(x, x + last, nb) << END << std::endl;
+    int last;
+    
+    for (last = 0; x[last] != '\0'; last++)
+        ;
+    std::cout << CYAN "last = " << last << END << std::endl;
+
+    bool exist = std::find(x, x.size(), nb);
+    std::cout << CYAN "Nb found? " << exist << END << std::endl;
     if (exist) {
         std::cout << "Element found\n";
     } else {
