@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:42:20 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:01:52 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:05:42 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ template<typename T>
 void    easyfind( T x, int nb ) {
 
     if (std::find(x.begin(), x.end(), nb) != x.end()) {
-        std::cout << GREEN "Success : Element found inside array." << std::endl;
+        std::cout << GREEN "Success : Element found inside array." END << std::endl;
     } else {
         throw NotFoundException();
     }
