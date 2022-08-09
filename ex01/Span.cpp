@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 23:56:17 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 00:24:56 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,27 +59,43 @@ unsigned int    Span::shortestSpan( void ) {
     std::sort(this->_vec.begin(), this->_vec.end());
 
     unsigned int shortestSpan;
-
+    // unsigned int res;
+    
     shortestSpan = UINT_MAX;
 
-    for (unsigned int i = 0 ; i < (unsigned int)this->_vec.size(); i++)
-    {
-        for (unsigned int j = i + 1 ; j < (unsigned int)this->_vec.size(); j++)
-        {
-            // // unsigned int res = static_cast<unsigned int>(std::max_element(this->_vec[i], this->_vec[j]) - std::min_element(this->_vec[i], this->_vec[j]));
-            // // unsigned int res = static_cast<unsigned int>(std::max_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])) - std::min_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])));
-            // unsigned int res = static_cast<unsigned int>(std::max_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])) - std::min_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])));
+    // for (unsigned int i = 0 ; i < (unsigned int)this->_vec.size(); i++)
+    // {
+    //     for (unsigned int j = i + 1 ; j < (unsigned int)this->_vec.size(); j++)
+    //     {
+    //         // // unsigned int res = static_cast<unsigned int>(std::max_element(this->_vec[i], this->_vec[j]) - std::min_element(this->_vec[i], this->_vec[j]));
+    //         // // unsigned int res = static_cast<unsigned int>(std::max_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])) - std::min_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])));
+    //         // unsigned int res = static_cast<unsigned int>(std::max_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])) - std::min_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])));
 
-            // if (i != j && static_cast<unsigned int>(this->_vec[i]) != static_cast<unsigned int>(this->_vec[j]) && res < shortestSpan)
-            // {
-            //     shortestSpan = res;
+    //         // if (i != j && static_cast<unsigned int>(this->_vec[i]) != static_cast<unsigned int>(this->_vec[j]) && res < shortestSpan)
+    //         // {
+    //         //     shortestSpan = res;
                 
-            //     // std::cout << "vec[i]: " << this->_vec[i] << std::endl;
-            //     // std::cout << "vec[0]: " << this->_vec[0] << std::endl;
-            // }
-            std::cout << "i = " << i << " | j = " << j << std::endl; 
-        }
-        // std::cout << "shortestSpan: " << shortestSpan << std::endl;
+    //         //     // std::cout << "vec[i]: " << this->_vec[i] << std::endl;
+    //         //     // std::cout << "vec[0]: " << this->_vec[0] << std::endl;
+    //         // }
+            
+    //         // by default, std::max_element() and std::min_element() return iterators.
+    //         // res = static_cast<unsigned int>(*std::max_element(this->_vec + i), this->_vec + j) - *std::min_element(this->_vec + i, (this->_vec + j));
+            
+    //         std::cout << "Max elem: " << itr << std::endl;
+
+    //         std::cout << WHITE "res = " << res << END << std::endl; 
+            
+    //         std::cout << WHITE "i = " << i << " | j = " << j << END << std::endl; 
+    //     }
+    //     // std::cout << "shortestSpan: " << shortestSpan << std::endl;
+    // }
+
+    std::vector<int>::iterator itr;
+    
+    for (itr = this->_vec.begin(); itr != this->_vec.end(); itr++)
+    {
+        std::cout << "itr: " << *itr << std::endl;
     }
 
     return (shortestSpan);
