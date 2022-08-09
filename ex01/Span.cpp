@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:35:20 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:38:33 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,18 @@ void    Span::addNumber( int nb ) {
         this->_vec.push_back(nb);
     else
         throw Span::ReachedMaxNumberException();
+
+    return ;
+}
+
+unsigned int    Span::shortestSpan( void ) {
+
+    
+    return ;
+}
+
+unsigned int    Span::longestSpan( void ) {
+
 
     return ;
 }
