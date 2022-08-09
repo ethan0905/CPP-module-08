@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 01:11:54 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 01:15:10 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ unsigned int    Span::shortestSpan( void ) {
         while (jtr != this->_vec.end())
         {
             // if (*std::max_element(itr, jtr) != *std::min_element(itr, jtr))
-            // // if (!(*itr == *jtr))
+            // if (!(*itr == *jtr) && )
             // {
                 // res = *std::max_element(itr, jtr) - *std::min_element(itr, jtr);
                 if (static_cast<unsigned int>(*(itr + 1) - *itr) < shortestSpan && static_cast<unsigned int>(*(itr + 1) - *itr) != 0)
