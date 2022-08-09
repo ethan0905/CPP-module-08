@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:42:20 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 20:32:11 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 21:46:59 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class NotFoundException : public std::exception {
 template<typename T>
 void    easyfind( T const & x, int nb ) {
 
-    std::cout << WHITE "Begin: " << *x.begin() << std::endl;
-    std::cout << "End: " << *x.end() << END << std::endl;
+    std::cout << WHITE "Begin: " << x.begin() << std::endl;
+    std::cout << "End: " << x.end() << END << std::endl;
 
     (void)nb;
     // bool exist = std::find(x.begin(), x.end(), nb);

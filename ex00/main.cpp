@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:41:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 20:31:23 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 21:49:21 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@ int main()
 {
     try
     {
-        // // Initializer list
-        // std::vector<int> tab = {1, 2, 3, 4, 5};
-        // Uniform initialization
-        std::vector<int> tab;
+        std::vector<int> vec;
 
-        tab.push_back(0);
-        tab.push_back(1);
-        tab.push_back(2);
+        for (int i = 0; i < 10; i++)
+            vec.push_back(i);
+        
+        for (int i = 0; i < 10; i++)
+            std::cout << vec[i] << " ";
 
-        ::easyfind(tab, 4);
+        // ::easyfind(vec, 4);
     }
     catch(const std::exception& e)
     {
