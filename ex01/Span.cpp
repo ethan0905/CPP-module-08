@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:38:33 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:41:41 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,20 +53,28 @@ void    Span::addNumber( int nb ) {
 
 unsigned int    Span::shortestSpan( void ) {
 
-    
+    if (this->_vec.size() < 2)
+        throw Span::NotEnoughNumbersException();
+        
     return ;
 }
 
 unsigned int    Span::longestSpan( void ) {
 
+    if (this->_vec.size() < 2)
+        throw Span::NotEnoughNumbersException();
 
     return ;
 }
 
-
 const char    *Span::ReachedMaxNumberException::what()const throw() {
     
     return (RED "Error: reached max number element." END);
+}
+
+const char    *Span::NotEnoughNumbersException::what()const throw() {
+    
+    return (RED "Error: not enough numbers to proceed the check." END);
 }
 
 Span   &Span::operator=( Span const &src ) {

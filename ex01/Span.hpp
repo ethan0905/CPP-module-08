@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:17:04 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:37:50 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:40:13 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ class   Span {
         Span  &operator=( Span const &src );
 
         class ReachedMaxNumberException : public std::exception {
+            public:
+                virtual const char* what()const throw();
+        };
+        class NotEnoughNumbersException : public std::exception {
             public:
                 virtual const char* what()const throw();
         };
