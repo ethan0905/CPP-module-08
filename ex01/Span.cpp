@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 23:24:23 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 23:56:17 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,22 @@ unsigned int    Span::shortestSpan( void ) {
 
     for (unsigned int i = 0 ; i < (unsigned int)this->_vec.size(); i++)
     {
-        if (static_cast<unsigned int>(this->_vec[i]) != static_cast<unsigned int>(this->_vec[0]) && static_cast<unsigned int>(this->_vec[i]) < shortestSpan)
+        for (unsigned int j = i + 1 ; j < (unsigned int)this->_vec.size(); j++)
         {
-            shortestSpan = this->_vec[i] - this->_vec[0];
-            
-            std::cout << "vec[i]: " << this->_vec[i] << std::endl;
-            std::cout << "vec[0]: " << this->_vec[0] << std::endl;
-        }
+            // // unsigned int res = static_cast<unsigned int>(std::max_element(this->_vec[i], this->_vec[j]) - std::min_element(this->_vec[i], this->_vec[j]));
+            // // unsigned int res = static_cast<unsigned int>(std::max_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])) - std::min_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])));
+            // unsigned int res = static_cast<unsigned int>(std::max_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])) - std::min_element(static_cast<unsigned int>(this->_vec[i]), static_cast<unsigned int>(this->_vec[j])));
 
-        std::cout << "shortestSpan: " << shortestSpan << std::endl;
+            // if (i != j && static_cast<unsigned int>(this->_vec[i]) != static_cast<unsigned int>(this->_vec[j]) && res < shortestSpan)
+            // {
+            //     shortestSpan = res;
+                
+            //     // std::cout << "vec[i]: " << this->_vec[i] << std::endl;
+            //     // std::cout << "vec[0]: " << this->_vec[0] << std::endl;
+            // }
+            std::cout << "i = " << i << " | j = " << j << std::endl; 
+        }
+        // std::cout << "shortestSpan: " << shortestSpan << std::endl;
     }
 
     return (shortestSpan);
