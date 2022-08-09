@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:41:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 21:49:21 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:03:17 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int main()
             vec.push_back(i);
         
         for (int i = 0; i < 10; i++)
-            std::cout << vec[i] << " ";
-
-        // ::easyfind(vec, 4);
+            std::cout << "vec[" << i << "] = [" << vec[i] << "]" << std::endl;
+        
+        ::easyfind(vec, 2);
     }
     catch(const std::exception& e)
     {
