@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:17:04 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:40:13 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:55:04 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class   Span {
     
     public:
         Span( unsigned int N );
+        Span( Span const & src );
         ~Span( void );
 
         void    addNumber( int nb );
@@ -42,7 +43,6 @@ class   Span {
 
     private:
         Span( void );
-        Span( Span const & src );
         std::vector<int> _vec;
         unsigned int _N;
 };

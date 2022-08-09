@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:52:53 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 23:06:41 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,9 @@ unsigned int    Span::shortestSpan( void ) {
 
     if (this->_vec.size() < 2)
         throw Span::NotEnoughNumbersException();
-        
+    
+    
+
     return 2;
 }
 
@@ -66,7 +68,11 @@ unsigned int    Span::longestSpan( void ) {
 
     std::sort(this->_vec.begin(), this->_vec.end());
 
-    return (this->_vec[this->_vec.size() - 1] - this->_vec[0]);
+    unsigned int longestSpan;
+
+    longestSpan = static_cast<unsigned int>(*std::max_element(this->_vec.begin(), this->_vec.end()) - *std::min_element(this->_vec.begin(), this->_vec.end()));
+
+    return (longestSpan);
 }
 
 const char    *Span::ReachedMaxNumberException::what()const throw() {

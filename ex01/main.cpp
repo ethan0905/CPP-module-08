@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:41:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:53:41 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 23:06:13 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,31 @@
 
 int main()
 {
-    try
-    {
-        Span span(100);
+    Span sp = Span(5);
+    sp.addNumber(6);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
+    sp.addNumber(11);
+    std::cout << sp.shortestSpan() << std::endl;
+    std::cout << sp.longestSpan() << std::endl;
 
-        for (int i = 10; i > 0; i--)
-            span.addNumber(i);
+    // try
+    // {
+    //     Span span(100);
 
-        span.addNumber(42);
+    //     for (int i = 10; i > 0; i--)
+    //         span.addNumber(i);
 
-        std::cout << "longest span: " << span.longestSpan() << std::endl;
+    //     span.addNumber(42);
+
+    //     std::cout << "longest span: " << span.longestSpan() << std::endl;
         
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
     
     return (0);
 }
