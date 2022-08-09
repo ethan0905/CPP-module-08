@@ -6,13 +6,13 @@
 #    By: esafar <esafar@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 14:59:45 by esafar            #+#    #+#              #
-#    Updated: 2022/08/09 18:41:20 by esafar           ###   ########.fr        #
+#    Updated: 2022/08/09 22:34:33 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Find
+NAME = Span
 
-SRCS = main.cpp
+SRCS = main.cpp Span.cpp
 
 GCC = c++
 FLAGS = -g -Wextra -Wall -Werror -std=c++98 

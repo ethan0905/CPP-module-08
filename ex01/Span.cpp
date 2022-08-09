@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 22:31:07 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 22:35:20 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Span::Span( void ) {
     return ;
 }
 
-Span::Span( unsigned int N ) {
+Span::Span( unsigned int N ) : _N(N) {
 
     std::cout << CYAN "Span:: " GREEN "Parametric constructor called" END << std::endl;
 
@@ -59,7 +59,7 @@ const char    *Span::ReachedMaxNumberException::what()const throw() {
 
 Span   &Span::operator=( Span const &src ) {
 
-    *this = src;
+    (void)src;
 
     return (*this);
 }
