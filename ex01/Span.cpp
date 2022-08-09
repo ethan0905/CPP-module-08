@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:20:56 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/09 23:06:41 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/09 23:24:23 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,26 @@ unsigned int    Span::shortestSpan( void ) {
     if (this->_vec.size() < 2)
         throw Span::NotEnoughNumbersException();
     
-    
+    std::sort(this->_vec.begin(), this->_vec.end());
 
-    return 2;
+    unsigned int shortestSpan;
+
+    shortestSpan = UINT_MAX;
+
+    for (unsigned int i = 0 ; i < (unsigned int)this->_vec.size(); i++)
+    {
+        if (static_cast<unsigned int>(this->_vec[i]) != static_cast<unsigned int>(this->_vec[0]) && static_cast<unsigned int>(this->_vec[i]) < shortestSpan)
+        {
+            shortestSpan = this->_vec[i] - this->_vec[0];
+            
+            std::cout << "vec[i]: " << this->_vec[i] << std::endl;
+            std::cout << "vec[0]: " << this->_vec[0] << std::endl;
+        }
+
+        std::cout << "shortestSpan: " << shortestSpan << std::endl;
+    }
+
+    return (shortestSpan);
 }
 
 unsigned int    Span::longestSpan( void ) {
