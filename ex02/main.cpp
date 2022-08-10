@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:41:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 03:47:22 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 03:56:43 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ int main()
     list.push_back(5);
     list.push_back(17);
 
-    std::cout << WHITE "mstack.top ->" << mstack.top() << std::endl;
-    std::cout << "list.back ->" <<list.back() << END << std::endl;
+    std::cout << WHITE "mstack.top -> " << mstack.top() << std::endl;
+    std::cout << "list.back -> " <<list.back() << END << std::endl;
 
     std::cout << CYAN "=== Poping last element ===" END << std::endl;
     
     mstack.pop();
     list.pop_back();
 
-    std::cout << YELLOW "mstack.top ->" << mstack.top() << std::endl;
-    std::cout << "list.back ->" <<list.back() << END << std::endl;
+    std::cout << YELLOW "mstack.top -> " << mstack.top() << std::endl;
+    std::cout << "list.back -> " <<list.back() << END << std::endl;
     
     std::cout << CYAN "=== Displaying size() ===" END << std::endl;
 
-    std::cout << MAGENTA "mstack.size ->" << mstack.size() << std::endl;
-    std::cout << "list.size ->" << list.size() << END << std::endl;
+    std::cout << MAGENTA "mstack.size -> " << mstack.size() << std::endl;
+    std::cout << "list.size -> " << list.size() << END << std::endl;
 
     std::cout << CYAN "=== Pushing 3, 5, 737 and 0 ===" END << std::endl;
 
@@ -51,13 +51,13 @@ int main()
     list.push_back(737);
     list.push_back(0);
 
-    std::cout << WHITE "mstack.top ->" << mstack.top() << std::endl;
-    std::cout << "list.back ->" <<list.back() << END << std::endl;
+    std::cout << WHITE "mstack.top -> " << mstack.top() << std::endl;
+    std::cout << "list.back -> " <<list.back() << END << std::endl;
 
     std::cout << CYAN "=== Displaying size() ===" END << std::endl;
 
-    std::cout << MAGENTA "mstack.size ->" << mstack.size() << std::endl;
-    std::cout << "list.size ->" << list.size() << END << std::endl;
+    std::cout << MAGENTA "mstack.size -> " << mstack.size() << std::endl;
+    std::cout << "list.size -> " << list.size() << END << std::endl;
 
     MutantStack<int>::iterator it = mstack.begin();
     MutantStack<int>::iterator ite = mstack.end();
@@ -92,9 +92,33 @@ int main()
 
     std::stack<int> s(mstack);
     
-    std::cout << WHITE "s(mstack).top ->" << s.top() << std::endl;
-    std::cout << WHITE "s(mstack).size ->" << s.size() << std::endl;
+    std::cout << WHITE "s(mstack).top -> " << s.top() << std::endl;
+    std::cout << WHITE "s(mstack).size -> " << s.size() << std::endl;
 
+    std::cout << CYAN "=== Tests with std::string ===" END << std::endl;
+
+    MutantStack<std::string> sstack1;
+    MutantStack<std::string> sstack2;
+
+    sstack1.push("hey");
+    sstack1.push("here is the final test");
+    sstack1.push("before i push");
+    sstack1.push("hope that you enjoyed the exercise!");
+
+    std::cout << WHITE "sstack1.top -> " << sstack1.top() << std::endl;
+    
+    std::cout << YELLOW "sstack1.size -> " << sstack1.size() << std::endl;
+    std::cout << YELLOW "sstack2.size -> " << sstack2.size() << std::endl;
+
+    std::cout << CYAN "=== Testing copy ===" END << std::endl;
+
+    sstack2 = sstack1;
+
+    std::cout << WHITE "sstack1.top -> " << sstack1.top() << std::endl;
+    std::cout << WHITE "sstack2.top -> " << sstack2.top() << std::endl;
+    
+    std::cout << YELLOW "sstack1.size -> " << sstack1.size() << std::endl;
+    std::cout << YELLOW "sstack2.size -> " << sstack2.size() << std::endl;
     
     return (0);
 }
