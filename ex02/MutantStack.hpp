@@ -6,28 +6,21 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:17:04 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 03:20:07 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 03:57:53 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MUTANTSTACK_HPP
 # define MUTANTSTACK_HPP
 
-// #include <iostream>
-// #include <algorithm>
-// #include <vector>
-// #include <deque>
-// #include <string>
-// #include <list>
-// #include <limits.h>
-
 #include <iostream>
-#include <stack>
+#include <algorithm>
+#include <vector>
 #include <iterator>
 #include <deque>
-#include <list>
+#include <stack>
 #include <string>
-
+#include <list>
 #include "color.h"
 
 template<typename T>
