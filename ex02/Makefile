@@ -6,13 +6,13 @@
 #    By: esafar <esafar@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 14:59:45 by esafar            #+#    #+#              #
-#    Updated: 2022/08/10 02:42:45 by esafar           ###   ########.fr        #
+#    Updated: 2022/08/10 02:53:48 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = MutantStack
 
-SRCS = main.cpp MutantStack.cpp
+SRCS = main.cpp
 
 GCC = c++
 FLAGS = -g -Wextra -Wall -Werror -std=c++98 
