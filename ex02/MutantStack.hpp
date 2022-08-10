@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:17:04 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 02:53:28 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 03:20:07 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ class   MutantStack : public std::stack<T> {
 
             return (this->c.end());
         }
-    private:
 };
 
 #endif
