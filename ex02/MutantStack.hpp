@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:17:04 by esafar            #+#    #+#             */
-/*   Updated: 2022/08/10 02:25:32 by esafar           ###   ########.fr       */
+/*   Updated: 2022/08/10 02:42:38 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,40 @@
 #include "color.h"
 
 template<typename T>
-class   MutantStack : public std::stack {
+class   MutantStack : public std::stack<T> {
     
     public:
-        MutantStack( unsigned int N );
-        MutantStack( MutantStack const & src );
-        ~MutantStack( void );
+        MutantStack( void ) {
 
-        MutantStack  &operator=( MutantStack const &src );
+            return ;
+        }
+        MutantStack( MutantStack const & src ) {
 
-        class ReachedMaxNumberException : public std::exception {
-            public:
-                virtual const char* what()const throw();
-        };
-        class NotEnoughNumbersException : public std::exception {
-            public:
-                virtual const char* what()const throw();
-        };
+            *this = src;
+            return ;
+        }
+        virtual ~MutantStack( void ) {
+            
+            return ;
+        }
+
+        MutantStack  &operator=( MutantStack const &src ) {
+            
+            *this = src;   
+            return (*this);
+        }
 
     private:
-        MutantStack( void );
-        std::vector<int> _vec;
-        unsigned int _N;
+        typedef typename std::deque<T>::iterator iterator;
+
+        iterator begin() {
+
+            return (this->c.begin());
+        }
+        iterator end() {
+
+            return (this->c.end());
+        }
 };
 
 #endif
